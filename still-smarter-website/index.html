@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Smarter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .counter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Still Smarter</h1>
+    <p>This is your motivational message!</p>
+    <p class="counter" id="counter"></p>
+
+    <script>
+        const startDate = new Date('2024-01-01');  // Change this to your desired start date
+        const today = new Date();
+        const diffTime = Math.abs(today - startDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById('counter').textContent = `${diffDays} days have passed.`;
+    </script>
+</body>
+</html>
