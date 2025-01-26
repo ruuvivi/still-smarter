@@ -19,7 +19,7 @@ export class StillSmarterStack extends cdk.Stack {
       }
   });
 
-    // Domain name and subdirectory
+    // domainName = your domain name & siteSubPath = your directory or subdirectory, depending on your domain path
     const domainName = process.env.DOMAIN_NAME ||  'default-domain.com';
     const siteSubPath = process.env.SITE_SUB_PATH || 'default-path';
 
