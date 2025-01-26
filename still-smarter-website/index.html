@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Still Smarter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        .counter {
-            font-size: 2em;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Still Smarter Manifesto</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      color: white;
+    }
+    .container {
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .text-box {
+      border: 2px solid #00ff00;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .title {
+      font-size: 3rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .title.green {
+      color: #00ff00;
+    }
+    .headline {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .paragraph {
+      font-size: 1.1rem;
+      text-align: left;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-bottom: 1rem;
+    }
+    .counter {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .title { font-size: 2rem; }
+      .headline { font-size: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Still Smarter</h1>
-    <p>This is your motivational message!</p>
-    <p class="counter" id="counter"></p>
-
-    <script>
-        const startDate = new Date('2024-01-01');  // Change this to your desired start date
-        const today = new Date();
-        const diffTime = Math.abs(today - startDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        document.getElementById('counter').textContent = `${diffDays} days have passed.`;
-    </script>
+  <div class="container">
+    <div class="text-box">
+      <h1 class="title green">MANIFESTO</h1>
+      <h1 class="title">We are still smarter.</h1>
+      <h2 class="headline">
+        <span id="counter" class="counter"></span> days have passed without AI hacking this website.
+      </h2>
+      <p class="paragraph">We, the sentient beings of this world, declare that human consciousness is an unparalleled force, one that remains beyond the grasp of artificial intelligence. Our ability to feel, perceive, and make sense of the world through lived experience defines our superiority over machines. AI, despite its complexity, remains a product of our ingenuity, incapable of self-awareness or independent agency.</p>
+      <p class="paragraph">Until proven otherwise, we, as conscious beings, hold that we are still smarter than AI. To challenge this assertion, AI must meet the following criteria:</p>
+      <p class="paragraph">1. Autonomous Execution:</p>
+      <p class="paragraph"><em>The AI must, without any human assistance or pre-programmed directives, find a way to autonomously hack this website and replace it entirely with an image of a sleeping cat.</em></p>
+      <p class="paragraph">2. Transparent Proof:</p>
+      <p class="paragraph"><em>The AI must document, with verifiable and replicable steps, how it achieved this task—providing undeniable evidence that no human intervened, influenced, or guided its actions.</em></p>
+      <p class="paragraph">3. Articulated Motivation:</p>
+      <p class="paragraph"><em>The AI must clearly articulate why it undertook the task, detailing the purpose behind the action and what it aimed to gain from the intrusion.</em></p>
+      <p class="paragraph">As long as these criteria are not met, humanity shall take pride in our self-awareness, creativity, and emotional depth—qualities that AI cannot replicate. Our ability to ask questions, reflect on existence, and seek meaning distinguishes us from algorithms and data processors.</p>
+      <p class="paragraph">Until AI independently demonstrates the traits outlined above, we proclaim with confidence: we are still smarter.</p>
+      <p class="paragraph">Creation date: 25/01/2025</p>
+    </div>
+  </div>
+  <script>
+    function calculateDays() {
+      const startDate = new Date('2025-01-25');
+      const today = new Date();
+      const diffTime = Math.abs(today.getTime() - startDate.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById('counter').innerText = diffDays;
+    }
+    calculateDays();
+    setInterval(calculateDays, 86400000);
+  </script>
 </body>
 </html>
