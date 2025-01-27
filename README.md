@@ -84,6 +84,8 @@ The credentials are stored in the default location ~/.aws/config.
 Use the following command to clone the repository:
 ```bash
 git clone https://github.com/your-username/still-smarter.git
+```
+
 Navigate to your repository
 ```bash
 cd still-smarter
