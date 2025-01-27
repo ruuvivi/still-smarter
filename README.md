@@ -1,14 +1,13 @@
 # Static website using AWS CDK
 
-A static **Typscript** web application deployed and maintained programmatically using **AWS Cloud Development Kit (AWS CDK)**. Use **Infrastructure as code (IaC)** to deploy and maintain a website with **Amazon Web Services (AWS)**.
+A static web application deployed and maintained programmatically using **AWS Cloud Development Kit (AWS CDK)**. Use **Infrastructure as code (IaC)** to deploy and maintain a website with **Amazon Web Services (AWS)**.
 
 The AWS stack consists of the following resources:
 - **IAM**
-- **CloudFormation**
 - **S3**
-- **CloudFront**
 - **Route 53**
-- **Certificate Manager**.
+- **Certificate Manager**
+- **CloudFront**
 
 ## Features
 
@@ -162,10 +161,11 @@ cdk destroy
 
 ## Technologies Used
 - **TypeScript**
+- **JavaScript**
 - **Node.js**
 - **AWS CLI**
 - **AWS CDK**
-- **Amazon Web Services: CloudFormaton, S3, CloudFront, Route 53, Certificate Manager**
+- **AWS Resources: IAM, S3, CloudFront, Route 53, Certificate Manager**
 - **GitHub**
 
 ## Live Demo
