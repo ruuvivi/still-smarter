@@ -79,80 +79,57 @@ The credentials are stored in the default location ~/.aws/config.
 
 ### Creating the project
 
-1. **Create a New AWS CDK Project**
-   - Create a new directory and navigate into it
+1. **Clone the repository**
+
+Use the following command to clone the repository:
 ```bash
-   mkdir still-smarter && cd still-smarter
-   ```
-   - Initialize the CDK app with TypeScript:
+git clone https://github.com/your-username/still-smarter.git
+Navigate to your repository
 ```bash
-   cdk init app --language=typescript
-   ```
+cd still-smarter
+```
    
-2. **Install Required AWS CDK Modules**
-   - This project uses **S3**, **CloudFront**, **route 53**, **Certificate  Manager**:
+2. **Run npm install**
+
+Install all required dependencies with the following command:
 ```bash
-   npm install @aws-cdk/aws-s3 @aws-cdk/aws-s3-deployment @aws-cdk/aws-cloudfront @aws-cdk/aws-route53 @aws-cdk/aws-certificatemanager
+   npm install
 ```
 
-3. **Install the dotenv Library**
-
-Dotenv is a zero-dependency module that loads environment-specific variables that you want to keep outside your codebase from a . env file into process. env.
-- Install dotenv library:
-```bash
-npm install dotenv
-```
-
-4. **Define the Infrastructure in AWS CDK**
-- Set up the file lib/still-smarter-stack.ts.
-
-5. **Create an .env file**
+3. **Create an .env file**
 
 Store the sensitive values in environmental variables instead of hardcoding it in your code:
 ```bash
 touch .env
 ```
-Add the environmental values to the .env file
+Add the environmental values to the .env file by applying them to the placeholders:
 ```TypeScript
-AWS_REGION=(your region)
-DOMAIN_NAME=(domain / subdomain name)
-SITE_SUB_PATH=(domain / subdomain path)
-CERTIFICATE_ARN=(Your **ACM** certificate's ARN value)
+AWS_REGION={your region}
+DOMAIN_NAME={domain name}
+SITE_SUB_PATH={subdomain path} (if using a subdomain)
+CERTIFICATE_ARN={Your **ACM** certificate's ARN value}
 ```
 
-6. **Update your .gitignore file**
+4. **Update your .gitignore file**
 
 Add the .env file in .gitignore in order to prevent sensitive information from being pushed to GitHub.
 
-
-7. **Create the Website Content**
-
-Inside the project root, create a folder named still-smarter-website:
-```bash
-mkdir still-smarter-website
-```
-Add an index.html file inside the still-smarte-website folder:
-```bash
-touch index.html
-```
-and add the website content in **HTML**.
-
-8. **Deploy the Infrastructure and Website**
+5. **Deploy the Infrastructure and Website**
 
 Before you deploy your CDK stack into an AWS environment, the environment must first be bootstrapped. Bootstrapping is a process of preparing your AWS for usage with the determined AWS resources in your environment that are used by the AWS CDK.
 Bootstrap your AWS environment (only required once per region):
 ```bash
 cdk bootstrap
 ```
-9. **Deploy your CDK stack to AWS**
+6. **Deploy your CDK stack to AWS**
 
-Ones bootstrapping is done, deploy your stack into AWS.
+Once bootstrapping is done, deploy your stack into AWS.
 ```bash
 cdk deploy
 ```
 Once the deployment is complete, your CloudFront URL will be displayed in the output. Test the website in the browser.
 
-9. **Cleaning Up the deployed resources (Optional)**
+7. **Cleaning Up the deployed resources (Optional)**
 If you need to clean up thedeployed resources, run:
 
 ```bash

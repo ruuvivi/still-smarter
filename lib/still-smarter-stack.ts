@@ -20,8 +20,15 @@ export class StillSmarterStack extends cdk.Stack {
   });
 
     // domainName = your domain name & siteSubPath = your subdirectory
-    const domainName = process.env.DOMAIN_NAME ||  'default-domain.com';
-    const siteSubPath = process.env.SITE_SUB_PATH || 'default-path';
+    const domainName = process.env.DOMAIN_NAME;
+    if (!domainName) {
+      throw new Error('domainName variable is required');
+    }
+
+    const siteSubPath = process.env.SITE_SUB_PATH;
+    if (!siteSubPath) {
+      throw new Error('siteSubPath variable is required');
+    }
 
     // Lookup the hosted zone in Route 53
     const hostedZone = route53.HostedZone.fromLookup(this, 'HostedZone', {
@@ -45,7 +52,7 @@ export class StillSmarterStack extends cdk.Stack {
     const stillSmarterBucket = new s3.Bucket(this, 'stillSmarterBucket', {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true,
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      removalPolicy: cdk.RemovalPolicy.DESTROY, 
       autoDeleteObjects: true,
       blockPublicAccess: new s3.BlockPublicAccess({
         blockPublicAcls: false,
