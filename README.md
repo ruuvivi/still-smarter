@@ -14,7 +14,7 @@ The AWS stack consists of the following resources:
 A single web page containing a manifesto about AI taking this website down. There is a counter, which depicts the amount of days that has passed since the website has been running, and AI hasn't taken the website down on it's own initiative.
 
 ## AWS Setup
-The next steps are conducted in the AWS Console. Log in to your console.
+The next steps are conducted in the AWS Management Console. Log in to your console.
 
 ### Create an IAM User
    - Go to IAM in AWS console and navigate to "Users"
@@ -30,7 +30,7 @@ The next steps are conducted in the AWS Console. Log in to your console.
    - Complete the domain order.
    - Wait for the domain to be registered.
 
-In this project a subdomain is being used. In step 4. you need to assign your domain name to the variable **SITE_SUB_PATH**. It can be a subdomain as in this project.
+In this project a subdomain is being used. In step 5. you need to assign your domain name to the variable **SITE_SUB_PATH**. It can be a subdomain as in this project.
 
 ### Request Certificate from ACM
 Due to the regional requirement of CloudFront and potential validation issues, many users prefer manually creating the certificate and referencing the ARN in their CDK stacks, as in this project.
@@ -66,7 +66,7 @@ Install **AWS Cloud Development Kit (AWS CDK)**, a software development framewor
 ```bash
    npm install -g aws-cdk@latest
    ```
-Set up your **AWS **Account by creating the credentials file.
+Set up your **AWS** Account by creating the credentials file.
 
 ```bash
    aws configure
