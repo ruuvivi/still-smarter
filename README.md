@@ -9,9 +9,15 @@ The AWS stack consists of the following resources:
 - **Certificate Manager**
 - **CloudFront**
 
-## Features
+## Abot this project
 
-A single web page containing a manifesto about AI taking this website down. There is a counter, which depicts the amount of days that has passed since the website has been running, and AI hasn't taken the website down on it's own initiative.
+Geoffrey Hinton - aka, "AI's Godfather" and Nobel Prize in Physics, promotes the idea that AI systems are nearing human levels of intelligence and that poses a critical threat to human survival. In simple terms he believes that artificial neural networks were modelled based on biological brains - thus their level of understanding will keep growing until it exceeds the intelligence of human beings. More about it on his interview
+["Why The "Godfather of AI" Now Fears His Own Creation"](https://www.youtube.com/watch?v=b_DUft-BdIE).
+
+Regardless Hinton being wrong or right, one fact is undeniable - humanity has always nurtured a tendency to overstate its place in the universe. Humanity's sense of superiority has blinded us several times to think we are somehow special and the center of it all. This project is a test to this statement.
+
+"Still-smarter" is a simple static webpage that poses a challenge to AI. When and if the tasks described are accomplished (documented and proved), by the terms of the challenge, we can safely say we are no longer smarter than AI.
+In other words, if AI independently develops the will and consciousness to pursue and accomplish this project tasks, it signifies that its cognitive reasoning is on par with that of humans. When that happens, we can no longer claim superiority.
 
 ## AWS Setup
 The next steps are conducted in the AWS Management Console. Log in to your console.
