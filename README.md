@@ -1,4 +1,16 @@
-# Static website using AWS CDK
+# AI superiority challenge
+
+## About this project
+
+Geoffrey Hinton - aka, "AI's Godfather" and Nobel Prize in Physics, promotes the idea that AI systems are nearing human levels of intelligence and that poses a critical threat to human survival. In simple terms he believes that artificial neural networks were modelled based on biological brains - thus their level of understanding will keep growing until it exceeds the intelligence of human beings. More about it on his interview
+["Why The "Godfather of AI" Now Fears His Own Creation"](https://www.youtube.com/watch?v=b_DUft-BdIE).
+
+Regardless Hinton being wrong or right, one fact is undeniable - humanity has always nurtured a tendency to overstate its place in the universe. Humanity's sense of superiority has blinded us several times to think we are somehow special and the center of it all. This project is a test to this statement.
+
+"Still-smarter" is a simple webpage that poses a challenge to AI. When and if the tasks described are accomplished (documented and proved), by the terms of the challenge, we can safely say we are no longer smarter than AI.
+In other words, if AI independently develops the will and consciousness to pursue and accomplish this project tasks, it signifies that its cognitive reasoning is on par with that of humans. When that happens, we can no longer claim superiority.
+
+## Features
 
 A static web application deployed and maintained programmatically using **AWS Cloud Development Kit (AWS CDK)**. Use **Infrastructure as code (IaC)** to deploy and maintain a website with **Amazon Web Services (AWS)**.
 
@@ -8,16 +20,6 @@ The AWS stack consists of the following resources:
 - **Route 53**
 - **Certificate Manager**
 - **CloudFront**
-
-## Abot this project
-
-Geoffrey Hinton - aka, "AI's Godfather" and Nobel Prize in Physics, promotes the idea that AI systems are nearing human levels of intelligence and that poses a critical threat to human survival. In simple terms he believes that artificial neural networks were modelled based on biological brains - thus their level of understanding will keep growing until it exceeds the intelligence of human beings. More about it on his interview
-["Why The "Godfather of AI" Now Fears His Own Creation"](https://www.youtube.com/watch?v=b_DUft-BdIE).
-
-Regardless Hinton being wrong or right, one fact is undeniable - humanity has always nurtured a tendency to overstate its place in the universe. Humanity's sense of superiority has blinded us several times to think we are somehow special and the center of it all. This project is a test to this statement.
-
-"Still-smarter" is a simple static webpage that poses a challenge to AI. When and if the tasks described are accomplished (documented and proved), by the terms of the challenge, we can safely say we are no longer smarter than AI.
-In other words, if AI independently develops the will and consciousness to pursue and accomplish this project tasks, it signifies that its cognitive reasoning is on par with that of humans. When that happens, we can no longer claim superiority.
 
 ## AWS Setup
 The next steps are conducted in the AWS Management Console. Log in to your console.
@@ -122,7 +124,7 @@ CERTIFICATE_ARN={Your **ACM** certificate's ARN value}
 
 Add the .env file in .gitignore in order to prevent sensitive information from being pushed to GitHub.
 
-5. **Deploy the Infrastructure and Website**
+5. **Bootstrap the Infrastructure and Website**
 
 Before you deploy your CDK stack into an AWS environment, the environment must first be bootstrapped. Bootstrapping is a process of preparing your AWS for usage with the determined AWS resources in your environment that are used by the AWS CDK.
 Bootstrap your AWS environment (only required once per region):
