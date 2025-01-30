@@ -30,11 +30,6 @@ export class StillSmarterStack extends cdk.Stack {
       throw new Error('siteSubPath variable is required');
     }
 
-    // Lookup the hosted zone in Route 53
-    const hostedZone = route53.HostedZone.fromLookup(this, 'HostedZone', {
-      domainName: domainName,
-    });
-
     // CloudFront requires SSL certificates to be issued in the us-east-1 region
     // Request the certificate from us-east-1 (Needs to be created manually in us-east-1 via ACM)
     const certificateArn = process.env.CERTIFICATE_ARN;
